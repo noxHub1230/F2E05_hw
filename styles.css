@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Chiron+GoRound+TC:wght@200..900&family=LXGW+WenKai+TC&display=swap');
+
+
+    *{
+        box-sizing: border-box;
+    }
+    body{
+        background: #533f35;
+        color: #ecc692;
+    }
+    h1,h2,h3,h4,h5,h6,p,span{
+        margin: 0;
+        padding: 0;
+    }
+    header{
+        text-align: center;
+        margin: 1rem 0;
+    }
+    header h1{
+        font-family: Chiron GoRound TC;
+    }
+    header p{
+        font-family: LXGW WenKai TC;
+    }
+    nav{
+       display: flex;
+       flex-direction: row;
+       justify-content: center; 
+    }
+    nav button{
+        background: transparent;
+        color: #ecc692;
+        border: 1px solid #ecc692;
+        border-radius: 10px;
+        padding:0.5rem;
+    }
+    nav button:hover{
+        background: #ecc692;
+        color: #533f35;
+        border-radius: 10px 10px 0 0;
+    }
+    nav button.active {
+    background: #ecc692;
+    color: #533f35;
+    border-radius: 10px 10px 0 0;
+    border-bottom: 1px solid transparent;
+    pointer-events: none; /* 選擇性加入：讓已經被點選的按鈕暫時無法再點擊 */
+    }
+    section{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: transparent;
+        border-radius: 10px;
+        padding:1rem;
+    }
+    #_sepNine{
+    background:#f5deb3;
+    color:#000;
+    text-align: center;
+    font-weight: 550;
+    font-family: Arial, sans-serif;
+    }
+    #_sepNine,
+    #_sepNine tr,
+    #_sepNine td {
+        border: 2px solid #000;
+    }
+
+    #_sepNine {
+        border-collapse: collapse;
+    }
+    #_sepNine .info{
+    background:#000;
+    color:#fff;
+    font-weight:900;
+    }
