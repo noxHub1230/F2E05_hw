@@ -123,6 +123,13 @@ const homework=[
     </table>
     `,
  },   
+ {
+    date:910,
+    html:`
+    <div id="sepTen">
+    <div>
+    `
+ }
 ];
 const content=document.querySelector("#content");
 const navButtons=document.querySelectorAll("nav button");
@@ -135,9 +142,12 @@ navButtons.forEach(btn=>{
             activedBtn.classList.remove("active");
         }
         btn.classList.add("active");
-        switch(btn.id){
-            case "sepNine":
+        switch(btn.dataset.date){
+            case "Sep_9":
                 targetdate=909;
+                break;
+            case "Sep_10":
+                targetdate=910;
                 break;
             default:
                 targetdate=null;
