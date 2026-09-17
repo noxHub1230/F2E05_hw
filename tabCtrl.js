@@ -1,6 +1,6 @@
 const homework=[
  {
-    date:909,
+    date:"909",
     html:`
     <table id="_sepNine">
         <caption>來來小吃店</caption>
@@ -124,7 +124,7 @@ const homework=[
     `,
  },   
  {
-    date:910,
+    date:"910",
     html:`
     <div id="sepTen">
     <div>
@@ -133,39 +133,23 @@ const homework=[
 ];
 const content=document.querySelector("#content");
 const navButtons=document.querySelectorAll("nav button");
-let targetdate=null;
-let targetwork=null;
 navButtons.forEach(btn=>{
-    btn.addEventListener('click',()=>{
+    btn.addEventListener('click',(event)=>{
+        //給選中按鈕設定樣式控制
         const activedBtn=document.querySelector("nav button.active");
         if (activedBtn){
             activedBtn.classList.remove("active");
         }
         btn.classList.add("active");
-        switch(btn.dataset.date){
-            case "Sep_9":
-                targetdate=909;
-                break;
-            case "Sep_10":
-                targetdate=910;
-                break;
-            default:
-                targetdate=null;
-        }
-        targetwork=homework.find(item=>item.date===targetdate);
-        if (targetwork) {
-            content.innerHTML = targetwork.html;
-            content.style.background = "#ecc692";
+        //切換和找資料
+        const targetWork=homework.find(item=>item.date===event.target.dataset.date);
+        if(targetWork){
+        content.innerHTML=targetWork.html;
+        content.style.background = "#ecc692";
         } else {
             content.innerHTML = "<p>~ 這裡空空如也 ~</p>";
-        }
+        }    
     })
 });
-// const btn_sepNine=document.querySelector("#sepNine");
-// let targetwork=null;
-// btn_sepNine.addEventListener('click',()=>{
-//     targetwork=homework.find(items=>items.date===909);
-//     content.innerHTML=targetwork.html;
-//     content.style.background="#ecc692";
-// });
+
 
