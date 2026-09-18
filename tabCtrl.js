@@ -132,24 +132,25 @@ const homework=[
  }
 ];
 const content=document.querySelector("#content");
-const navButtons=document.querySelectorAll("nav button");
-navButtons.forEach(btn=>{
-    btn.addEventListener('click',(event)=>{
-        //給選中按鈕設定樣式控制
-        const activedBtn=document.querySelector("nav button.active");
-        if (activedBtn){
-            activedBtn.classList.remove("active");
-        }
-        btn.classList.add("active");
-        //切換和找資料
-        const targetWork=homework.find(item=>item.date===event.target.dataset.date);
-        if(targetWork){
-        content.innerHTML=targetWork.html;
-        content.style.background = "#ecc692";
-        } else {
-            content.innerHTML = "<p>~ 這裡空空如也 ~</p>";
-        }    
-    })
+const nav=document.querySelector("nav");
+
+nav.addEventListener('click',(event)=>{
+    const currentTarget=event.target;
+    //給選中按鈕設定樣式控制
+    const activedBtn=document.querySelector("nav button.active");
+    if (activedBtn){
+        activedBtn.classList.remove("active");
+    }
+    currentTarget.classList.add("active");
+    //切換和找資料
+    const targetWork=homework.find(item=>item.date===currentTarget.dataset.date);
+    if(targetWork){
+    content.innerHTML=targetWork.html;
+    content.style.background = "#ecc692";
+    } else {
+        content.innerHTML = "<p>~ 這裡空空如也 ~</p>";
+    }    
 });
+
 
 
