@@ -1,12 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Chiron+GoRound+TC:wght@200..900&family=LXGW+WenKai+TC&display=swap');
 
 
+    /*樣式初始化*/
     *{
         box-sizing: border-box;
+        --light-color:#ecc692;
+        --dark-color:#533f35
     }
     body{
-        background: #533f35;
-        color: #ecc692;
+        background: var(--dark-color);
+        color: var(--light-color);
     }
     h1,h2,h3,h4,h5,h6,p,span{
         margin: 0;
@@ -15,37 +18,40 @@
     header{
         text-align: center;
         margin: 1rem 0;
-    }
-    header h1{
-        font-family: Chiron GoRound TC;
-    }
-    header p{
-        font-family: LXGW WenKai TC;
+        h1{
+            font-family: Chiron GoRound TC;
+        }
+        p{
+            font-family: LXGW WenKai TC;
+        }
     }
     nav{
        display: flex;
        flex-direction: row;
        justify-content: center; 
        gap:1rem;
-    }
-    nav button{
+    button{
         background: transparent;
-        color: #ecc692;
-        border: 1px solid #ecc692;
+        color: var(--light-color);
+        border: 1px solid var(--light-color);
         border-radius: 10px;
+        border-bottom: none;
         padding:0.5rem;
+        cursor: pointer;
+        &:hover{
+                background: var(--light-color);
+                color: var(--dark-color);
+                border-radius: 10px 10px 0 0;
+            }
+            &.active {
+            background: var(--light-color);
+            color: var(--dark-color);
+            border-radius: 10px 10px 0 0;
+            border-bottom: 1px solid transparent;
+            pointer-events: none; /* 選擇性加入：讓已經被點選的按鈕暫時無法再點擊 */
+            }
     }
-    nav button:hover{
-        background: #ecc692;
-        color: #533f35;
-        border-radius: 10px 10px 0 0;
-    }
-    nav button.active {
-    background: #ecc692;
-    color: #533f35;
-    border-radius: 10px 10px 0 0;
-    border-bottom: 1px solid transparent;
-    pointer-events: none; /* 選擇性加入：讓已經被點選的按鈕暫時無法再點擊 */
+    
     }
     section{
         display: flex;
@@ -54,6 +60,27 @@
         background: transparent;
         border-radius: 10px;
         padding:1rem;
+        &#content {
+            div{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+            .switchBtn{
+            border-radius: 3em;
+            color: var(--light-color);
+            background: var(--dark-color);
+            padding: 1em;
+            border: none;
+            margin-bottom: 1em;
+            transition:0.5s;
+            cursor: pointer;
+                &:hover{
+                  transform: translateY(-0.5em);  
+                  box-shadow: 0 0.5em 0.5px #000;
+                }
+            }
+        }
     }
 /*9月9日*/
     #_sepNine{
@@ -62,20 +89,16 @@
     text-align: center;
     font-weight: 550;
     font-family: Arial, sans-serif;
-    }
-    #_sepNine,
-    #_sepNine tr,
-    #_sepNine td {
+    border: 2px solid #000;
+    border-collapse: collapse;;
+    tr,td{
         border: 2px solid #000;
     }
-
-    #_sepNine {
-        border-collapse: collapse;
-    }
-    #_sepNine .info{
+    & .info{
     background:#000;
     color:#fff;
     font-weight:900;
+    }
     }
 /*9月10日*/
     #sepTen h3{
