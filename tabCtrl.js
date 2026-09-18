@@ -135,15 +135,15 @@ const content=document.querySelector("#content");
 const nav=document.querySelector("nav");
 
 nav.addEventListener('click',(event)=>{
-    const currentTarget=event.target;
+    const selectedDate=event.target;
     //給選中按鈕設定樣式控制
     const activedBtn=document.querySelector("nav button.active");
     if (activedBtn){
         activedBtn.classList.remove("active");
     }
-    currentTarget.classList.add("active");
+    selectedDate.classList.add("active");
     //切換和找資料
-    const targetWork=homework.find(item=>item.date===currentTarget.dataset.date);
+    const targetWork=homework.find(item=>item.date===selectedDate.dataset.date);
     if(targetWork){
     content.innerHTML=targetWork.html;
     content.style.background = "#ecc692";
