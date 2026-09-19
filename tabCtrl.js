@@ -127,6 +127,66 @@ const homework=[
     date:"918",
     html:`
     <div id="sepEighteenth">
+        <h1>個人報名 Individual Registration</h1>
+        <section>
+        <h2>基本資料 / Basic Information</h2>
+            <label for="name">姓名 / Name</label>
+                <input id="name" type="text" name="name" placeholder="請輸入姓名" required></input>
+            <label>性別 / Gender</label>
+                <input id="male" type="radio" name="gender" value="male"></input>
+                <label for="male">男 /Male</label>
+                <input id="female" type="radio" name="gender" value="female"></input>
+                <label for="female">女 /Female</label>
+            <label>國籍 / Nationality</label>
+                <input id="roc" type="radio" name="nationality" value="roc"></input>
+                <label for="roc">本國國籍 / ROC Citizens</label>
+                <input id="non" type="radio name="nationality" value="non"></input>
+                <label for="non">外國國籍 / Non-Citizens</label>
+            <label for="id">身分證號 / ID Number</label>
+                <input id="id" type="text" name="id" placeholder="身分證或護照號碼" required></input>
+            <label for="birthDate">出生日期 / Date Of Birth</label>
+                <select id="year">
+                    <option disabled selected>年 / Year</option>
+                    <!--使用JS動態產生opt-->
+                </select>
+                <select id="month">
+                    <option disabled selected>月 / Month</option>
+                    <!--使用JS動態產生opt-->
+                </select>
+                <select id="day">
+                    <option disabled selected>日 / Day</option>
+                    <!--使用JS動態產生opt-->
+                </select>
+            <label for="email" required>電子信箱 / Email</label>
+                <input id="email" type="email" name="email" placeholder="examplemail.com"></input>
+            <label>聯絡電話 / Contact Number</label>
+                <label for="mob">手機 / Mobile</label>
+                    <input id="mob" type="number" name="mob" placeholder="0922053012"></input>
+                <label for="tel">住家 / Home</label>
+                    <input id="tel" type="number" name="tel" placeholder="0225855659"></input>
+                <label for="com">公司 /Office</label>
+                    <input id="com" type="number" name="tel></input>
+            <label for="address">通訊地址 / Mailing Address</label>
+                <select id="cty">
+                    <option value="" selected>請選擇縣市別 County/City</value>
+                    <!--使用JS動態產生opt-->
+                </select>    
+                <select id="cty">
+                    <option value="" selected>請選擇縣市別 County/City</value>
+                    <!--使用JS動態產生opt-->
+                </select>  
+                <input id="mailId" type="number" name="mailId" placeholder="郵遞區號"></input>     
+                <input id="location" type="text" name="location" placeholder="例如：昌吉街55號2樓206室"></input> 
+            <label for="emgcyContact">緊急聯絡人姓名 / Name of Emergency Contact</label>
+                <input id="emgcyContact" type="text" name="emgcyContact"></input>
+            <label for="ship">關係 / Relationship</label>
+                <input id="ship" type="text" name="ship"></input> 
+            <label for="phone">電話 / Phone</label>
+                <input id="phone" type="number" name="phone"></input>     
+        </section>
+        <section>
+        <h2>競賽項目資料 / Race Category Information</h2>
+        </section>
     <div>
     `
  }
