@@ -133,7 +133,7 @@ const homework=[
         <form>
             <fieldset class="group">
             <legend class="groupTitle">基本資料 / Basic Information</legend>
-                <label for="name">姓名 / Name</label>
+                <label for="name">姓名 / Name<span style="color:red">*</span></label>
                     <input id="name" type="text" name="name" placeholder="請輸入姓名" required/>
                 <fieldset>
                     <legend class="subTitle">性別 / Gender</legend>
@@ -149,7 +149,7 @@ const homework=[
                     <input id="non" type="radio" name="nationality" value="non"/>
                     <label for="non">外國國籍 / Non-Citizens</label>
                 </fieldset>
-                <label for="id">身分證號 / ID Number</label>
+                <label for="id">身分證號 / ID Number<span style="color:red">*</span></label>
                     <input id="id" type="text" name="id" placeholder="身分證或護照號碼" required/>
                 <fieldset>
                     <legend class="subTitle">出生日期 / Date Of Birth</legend>
@@ -166,7 +166,7 @@ const homework=[
                         <!--使用JS動態產生opt-->
                     </select>
                 </fieldset>
-                <label for="email">電子信箱 / Email</label>
+                <label for="email">電子信箱 / Email<span style="color:red">*</span></label>
                     <input id="email" type="email" name="email" placeholder="example@mail.com" required/>
                 <fieldset>
                     <legend class="subTitle">聯絡電話 / Contact Number</legend>
