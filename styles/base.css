@@ -1,7 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Chiron+GoRound+TC:wght@200..900&family=LXGW+WenKai+TC&display=swap');
-
-
-    /*樣式初始化*/
+/*全域樣式初始化*/
     *{
         box-sizing: border-box;
         --light-color:#ecc692;
@@ -84,80 +82,4 @@
             }
         }
     }
-/*9月9日*/
-    #_sepNine{
-    background:#f5deb3;
-    color:#000;
-    text-align: center;
-    font-weight: 550;
-    font-family: Arial, sans-serif;
-    border: 2px solid #000;
-    border-collapse: collapse;;
-    tr,td{
-        border: 2px solid #000;
-    }
-    & .info{
-    background:#000;
-    color:#fff;
-    font-weight:900;
-    }
-    }
-/*9月18日*/
-    #sepEighteenth {
-    font-family: Arial, Helvetica, sans-serif;
-    background: #fff;
-    color:#000;
-    overflow:hidden;
-        h1{
-            text-align: center;
-        }
-        fieldset {
-            border: none;
-            padding: 0;
-            margin: 0;
-            line-height: 2em;
-            legend,input,label{
-                display: inline-block;
-                margin:0;
-                padding:0;
-                &.subTitle{
-                    float:left;
-                    margin-right: 0.5em;
-                }
-            }
-            .container{
-                display:block;
-            }
-        }
-        .groupTitle{
-            color: #fff;
-            background: #525c91;
-            font-size: 18px;
-            position:relative;
-            top:0;
-            &.mainTitle{
-                font-size: 26px;
-            }
-            &::after{
-                content:"";
-                background:#525c91;
-                position:absolute;
-                top:0;
-                right:-600%;
-                width:1000%;
-                height:2px;
-            }
-        }
-        #submitBtn{
-            font-size: 14px;
-            background: #2c3e50;
-            color: #fff;
-            border:1px solid #999;
-        }
-        #resetBtn{
-            font-size:14px;
-            background:#c0392b;
-            color:#fff;
-            border:1px solid #999;
-        }
-    }
+
