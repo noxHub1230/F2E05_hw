@@ -1,6 +1,7 @@
 const homework=[
  {
-    date:"909",
+    date:"9月9日",
+    title:"來來小吃店",
     html:`
     <table id="_sepNine">
         <caption>來來小吃店</caption>
@@ -124,7 +125,8 @@ const homework=[
     `,
  },   
  {
-    date:"918",
+    date:"9月18日",
+    title:"個人報名表單",
     html:`
     <div id="sepEighteenth">
         <h1 class="groupTitle mainTitle">個人報名 Individual Registration</h1>

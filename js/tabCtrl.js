@@ -22,7 +22,7 @@ function renderWork(targetWork) {
             ${!isSwitch ? targetWork.html : srcCode}
         </div>
     `;//顯示渲染結果或原始碼
-    if(targetWork.date==="918"&& !isSwitch){
+    if(targetWork.date==="9月18日"&& !isSwitch){
         generateData();
     }
 
@@ -34,8 +34,15 @@ function renderWork(targetWork) {
     });
 }
 
+homework.forEach(hw=>{
+    const btn=document.createElement("button");
+    btn.dataset.date=hw.date;
+    btn.innerHTML=`<p>${hw.date}<br>${hw.title}</p>`;
+    nav.appendChild(btn);
+});
+
 nav.addEventListener("click", event => {
-    const selectedBtn = event.target;//被點擊的那一個按鈕
+    const selectedBtn = event.target.closest("button");//被點擊的那一個按鈕
     const activeBtn = document.querySelector("nav button.active");//選取所有帶.active的button
     if (activeBtn) {
         activeBtn.classList.remove("active");
