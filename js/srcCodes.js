@@ -202,16 +202,16 @@ const homework=[
                 <fieldset>
                     <input id="9km" type="checkbox" name="distance" value="9km"/>
                     <label for="9km">9KM (NTD 800)</label>
-                    <select id="9km_size" name="9km_size">
-                        <option value="">請選擇衣服尺寸</option>
+                    <select id="size9km" name="size9km">
+                        <option disabled selected value="">請選擇衣服尺寸</option>
                         <!--使用JS動態產生元素-->
                     </select>
                 </fieldset>
                 <fieldset>
                     <input id="3km" type="checkbox" name="distance" value="3km"/>
                     <label for="3km">3KM (NTD 650)</label>
-                    <select id="3km_size" name="3km_size">
-                        <option value="">請選擇衣服尺寸</option>
+                    <select id="size3km" name="size3km">
+                        <option disabled selected value="">請選擇衣服尺寸</option>
                         <!--使用JS動態產生元素-->
                     </select>
                 </fieldset>

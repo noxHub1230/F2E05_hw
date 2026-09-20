@@ -102,13 +102,17 @@ const location= [
     town: ["南竿鄉", "北竿鄉", "莒光鄉", "東引鄉"]
   }
 ];
+const sizes=['XS','S','M','L','XL','XXL/2L'];
 
 export function generateData(){
+    console.log("generateData 開始");
     const yearList=document.querySelector("#year");
     const monthList=document.querySelector("#month");
     const dayList=document.querySelector("#day");
     const ctyList=document.querySelector("#cty");
     const townList=document.querySelector("#town");
+    const size9km=document.querySelector("#size9km");
+    const size3km=document.querySelector("#size3km");
 
     year.forEach(element=>{
         const opt=document.createElement("option");
@@ -124,12 +128,8 @@ export function generateData(){
         monthList.appendChild(opt);
     });
 
-    day.forEach(element=>{
-        const opt=document.createElement("option");
-        opt.textContent=element;
-        opt.value=element;
-        dayList.appendChild(opt);
-    });
+    yearList.addEventListener("change",()=>{dayJudge(yearList,monthList,dayList)});
+    monthList.addEventListener("change",()=>{dayJudge(yearList,monthList,dayList)});
 
     location.forEach(element=>{
         const opt=document.createElement("option");
@@ -139,13 +139,44 @@ export function generateData(){
     });
 
     ctyList.addEventListener("change",(e)=>{
-    if(ctyList.value!==""){
-        const targetTownList=location.find(item=>ctyList.value===item.cty).town;
-        targetTownList.forEach(element=>{
-            const opt=document.createElement("option");
-            opt.textContent=element;
-            opt.value=element;
-            townList.appendChild(opt);
-        });    
-    }});
+      townList.innerHTML="<option disabled selected>請選擇鄉鎮區別 Township</option>";
+      if(ctyList.value!==""){
+          const targetTownList=location.find(item=>ctyList.value===item.cty).town;
+          targetTownList.forEach(element=>{
+              const opt=document.createElement("option");
+              opt.textContent=element;
+              opt.value=element;
+              townList.appendChild(opt);
+          });    
+      }
+    });
+
+    sizes.forEach(element=>{
+        const opt=document.createElement("option");
+        opt.textContent=element;
+        opt.value=element;
+        size9km.appendChild(opt);
+        const opt2=document.createElement("option");
+        opt2.textContent=element;
+        opt2.value=element;
+        size3km.appendChild(opt2);
+    });
+}
+function dayJudge(yearList,monthList,dayList){
+      dayList.innerHTML="<option disabled selected>日 / Day</option>";
+      day.forEach(element=>{
+          const opt=document.createElement("option");
+          opt.textContent=element;
+          opt.value=element;
+          if((Number(yearList.value)%4!==0&&monthList.value==="2")&&element>=29){
+            return
+          }
+          if((Number(yearList.value)%4===0&&monthList.value==="2")&&element>=30){
+            return;
+          }
+          if((monthList.value==="4"||monthList.value==="6"||monthList.value==="9"||monthList.value==="11")&&element===31){
+            return;
+          }
+          dayList.appendChild(opt);
+      });
 }
