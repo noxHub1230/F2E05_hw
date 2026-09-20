@@ -74,6 +74,8 @@
             border: none;
             margin-bottom: 1em;
             transition:0.5s;
+            width: 20em;
+            align-self: center;
             cursor: pointer;
                 &:hover{
                   transform: translateY(-0.5em);  
@@ -102,6 +104,60 @@
     }
 /*9月18日*/
     #sepEighteenth {
+    font-family: Arial, Helvetica, sans-serif;
     background: #fff;
-    color:#000
+    color:#000;
+    overflow:hidden;
+        h1{
+            text-align: center;
+        }
+        fieldset {
+            border: none;
+            padding: 0;
+            margin: 0;
+            line-height: 2em;
+            legend,input,label{
+                display: inline-block;
+                margin:0;
+                padding:0;
+                &.subTitle{
+                    float:left;
+                    margin-right: 0.5em;
+                }
+            }
+            .container{
+                display:block;
+            }
+        }
+        .groupTitle{
+            color: #fff;
+            background: #525c91;
+            font-size: 18px;
+            position:relative;
+            top:0;
+            &.mainTitle{
+                font-size: 26px;
+            }
+            &::after{
+                content:"";
+                background:#525c91;
+                position:absolute;
+                top:0;
+                right:-600%;
+                width:1000%;
+                height:2px;
+            }
+        }
+        #submitBtn{
+            font-size: 14px;
+            background: #2c3e50;
+            color: #fff;
+            border:1px solid #999;
+        }
+        #resetBtn{
+            font-size:14px;
+            background:#c0392b;
+            color:#fff;
+            border:1px solid #999;
+        }
     }
