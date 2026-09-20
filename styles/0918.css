@@ -21,6 +21,9 @@
                     margin-right: 0.5em;
                 }
             }
+            &.group{
+                border-bottom:2px solid #525c91;
+            }
             .container{
                 display:block;
             }
@@ -33,15 +36,6 @@
             top:0;
             &.mainTitle{
                 font-size: 26px;
-            }
-            &::after{
-                content:"";
-                background:#525c91;
-                position:absolute;
-                top:0;
-                right:-1000%;
-                width:2000%;
-                height:2px;
             }
         }
         #submitBtn{
