@@ -241,7 +241,7 @@ const homework=[
                 </div>
                 <div class="container">
                     <label for="note">備註 / Note</label>
-                    <textarea id="note" name="note" placeholder="如有特殊需求請於此說明" rows="4" cols="15"></textarea>
+                    <textarea id="note" name="note" placeholder="如有特殊需求請於此說明" rows="6" cols="50"></textarea>
                 </div>
                 <div class="container">
                     <label for="pic">上傳證件照 / Upload Photo</label>
