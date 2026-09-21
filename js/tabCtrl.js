@@ -63,6 +63,7 @@ nav.addEventListener("click", event => {
     }
 });
 
+///*監聽「使用者執行提交」這個事件(大約但不完全等於「點擊提交按鈕」)*/
 // form.addEventListener("submit",(e)=>{
 //     e.preventDefault();
 // });
