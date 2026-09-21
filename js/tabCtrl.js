@@ -63,6 +63,6 @@ nav.addEventListener("click", event => {
     }
 });
 
-form.addEventListener("change",(e)=>{
+form.addEventListener("submit",(e)=>{
     e.preventDefault();
 });
