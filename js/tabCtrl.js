@@ -3,6 +3,7 @@ import { homework } from "./srcCodes.js";
 
 const content = document.querySelector("#content");
 const nav = document.querySelector("nav");
+const form=document.querySelector("form");
 
 let isSwitch = false;
 
@@ -60,4 +61,8 @@ nav.addEventListener("click", event => {
     } else {
         content.innerHTML = "<p>~ 這裡空空如也 ~</p>";
     }
+});
+
+form.addEventListener("change",(e)=>{
+    e.preventDefault();
 });
