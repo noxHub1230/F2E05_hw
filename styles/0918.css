@@ -43,11 +43,13 @@
             background: #2c3e50;
             color: #fff;
             border:1px solid #999;
+            margin:1em 0 0;
         }
         #resetBtn{
             font-size:14px;
             background:#c0392b;
             color:#fff;
             border:1px solid #999;
+            margin:1em 0 0;
         }
     }
