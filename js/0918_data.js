@@ -162,21 +162,39 @@ export function generateData(){
         size3km.appendChild(opt2);
     });
 }
-function dayJudge(yearList,monthList,dayList){
-      dayList.innerHTML="<option disabled selected>日 / Day</option>";
-      day.forEach(element=>{
-          const opt=document.createElement("option");
-          opt.textContent=element;
-          opt.value=element;
-          if((Number(yearList.value)%4!==0&&monthList.value==="2")&&element>=29){
-            return
-          }
-          if((Number(yearList.value)%4===0&&monthList.value==="2")&&element>=30){
+function dayJudge(yearList, monthList, dayList) {
+    dayList.innerHTML = "<option disabled selected>日 / Day</option>";
+
+    const year = Number(yearList.value);
+    const month = monthList.value;
+    const isLeapYear =(year % 4 === 0 && year % 100 !== 0) ||year % 400 === 0;
+
+    day.forEach(element => {
+        const opt = document.createElement("option");
+        opt.textContent = element;
+        opt.value = element;
+
+        //2月判斷
+        if (month === "2") {
+            if (!isLeapYear && element >= 29) {
+                return;
+            }
+            if (isLeapYear && element >= 30) {
+                return;
+            }
+        }
+
+        //4、6、9、11月判斷
+        if (
+            (month === "4" ||
+             month === "6" ||
+             month === "9" ||
+             month === "11") &&
+            element === 31
+        ) {
             return;
-          }
-          if((monthList.value==="4"||monthList.value==="6"||monthList.value==="9"||monthList.value==="11")&&element===31){
-            return;
-          }
-          dayList.appendChild(opt);
-      });
+        }
+
+        dayList.appendChild(opt);
+    });
 }
