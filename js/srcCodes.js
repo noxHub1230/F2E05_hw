@@ -259,20 +259,25 @@ const homework=[
     html:`
     <div id="sepTwentyforth">
         <figure class="card">
-            <img class="thumbnail" src="../material/js_0924.webp"/>
+            <img class="thumbnail" src="./material/js_0924.webp"/>
             <figcaption class="container">
-                <strong class="price"></strong>
-                <button></button>
-                <button></button>
+                <strong class="price">NT$3,800</strong>
+                <div class="btns">
+                    <button>加入購物車</button>
+                    <button>直接購買</button>
+                </div>
                 <hr/>
-                <ul>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                </ul>
-                <p></p>
+                <span>
+                此課程包含
+                    <ul>
+                        <li>終身存取權</li>
+                        <li>行動裝置隨時學習</li>
+                        <li>9.9小時課程內容</li>
+                        <li>完課證書</li>
+                    </ul>
+                </span>
             </figcaption>
+            <span class="notes">公司同事一起學更划算！<a href="#">歡迎洽詢企業方案</a></span>
         </figure>
     </div>
     `

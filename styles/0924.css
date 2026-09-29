@@ -1,3 +1,59 @@
+:root{
+    --red_0924:#FF133E;
+    --white_0924:white;
+    --gray_0924:#d1d5dc;
+    --black_0924:black;
+    --text1_0924:30px;
+    --text2_0924:18px;
+}
 #sepTwentyforth{
-    
+    .card{
+        display:flex;
+        flex-direction:column;
+        width:340px;
+        color:var(--black_0924);
+        background: var(--white_0924);
+        font-size: var(--text2_0924);
+        border: 1px solid var(--gray_0924);
+        figcaption{
+            padding:32px 24px;
+            .price{
+                font-size: var(--text1_0924);
+            }
+            .btns{
+                row-gap: 8px;
+                margin-top:16px;
+                button{
+                font-size: var(--text2_0924);
+                display: block;
+                padding: 12px 0;
+                &:nth-child(1){
+                    border: 1px solid var(--white_0924);
+                    color: var(--white_0924);
+                    background: var(--red_0924);
+                }
+                &:nth-child(2){
+                    border: 1px solid var(--red_0924);
+                    color: var(--red_0924);
+                    background: var(--white_0924);
+                }
+                }
+            }
+            hr{
+                color: var(--gray_0924);
+                margin: 24px 0;
+            }
+            ul{
+                margin:16px 0;
+                row-gap: 12px;
+                li{
+                    list-style-type: circle;
+                }
+            }
+        }
+        .notes{
+            padding: 16px 24px;
+            border-top: 1px solid var(--gray_0924);
+        }
+    }
 }
