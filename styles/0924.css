@@ -27,16 +27,17 @@
                 font-size: var(--text2_0924);
                 display: block;
                 padding: 12px 0;
-                &:nth-child(1){
-                    border: 1px solid var(--white_0924);
-                    color: var(--white_0924);
-                    background: var(--red_0924);
-                }
-                &:nth-child(2){
-                    border: 1px solid var(--red_0924);
-                    color: var(--red_0924);
-                    background: var(--white_0924);
-                }
+                cursor: pointer;
+                    &:nth-child(1){
+                        border: 1px solid var(--white_0924);
+                        color: var(--white_0924);
+                        background: var(--red_0924);
+                    }
+                    &:nth-child(2){
+                        border: 1px solid var(--red_0924);
+                        color: var(--red_0924);
+                        background: var(--white_0924);
+                    }
                 }
             }
             hr{
