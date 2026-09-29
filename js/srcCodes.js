@@ -253,6 +253,29 @@ const homework=[
         </form>
     </div>
     `
+ },
+ {  date:"9月24日",
+    title:"課程卡片",
+    html:`
+    <div id="sepTwentyforth">
+        <figure class="card">
+            <img class="thumbnail" src="../material/js_0924.webp"/>
+            <figcaption class="container">
+                <strong class="price"></strong>
+                <button></button>
+                <button></button>
+                <hr/>
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+                <p></p>
+            </figcaption>
+        </figure>
+    </div>
+    `
  }
 ];
 export {homework};
