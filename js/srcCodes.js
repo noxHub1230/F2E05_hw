@@ -277,7 +277,7 @@ const homework=[
                     </ul>
                 </span>
             </figcaption>
-            <span class="notes">公司同事一起學更划算！<a href="#">歡迎洽詢企業方案</a></span>
+            <small class="notes">公司同事一起學更划算！<a href="#">歡迎洽詢企業方案</a></small>
         </figure>
     </div>
     `

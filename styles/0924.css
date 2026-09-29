@@ -40,7 +40,7 @@
                 }
             }
             hr{
-                color: var(--gray_0924);
+                border:1px solid var(--gray_0924);
                 margin: 24px 0;
             }
             ul{
