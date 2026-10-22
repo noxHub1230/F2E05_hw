@@ -281,6 +281,14 @@ const homework=[
         </figure>
     </div>
     `
+ },
+ {  date:"10月22日",
+    title:"復刻網頁",
+    html:`
+    <div id="sepTwentyforth">
+        <iframe src="./mimic.html"></iframe>
+    </div>
+    `
  }
 ];
 export {homework};
