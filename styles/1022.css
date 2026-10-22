@@ -15,4 +15,48 @@ body{
     margin: 0;
     box-sizing: border-box;
     font-family: "Museo Sans Rounded", Arial, Helvetica, sans-serif;
+    background: var(--bg_1022);
+    text-decoration: none;
+}
+a{
+    color: var(--text_1022);
+    display: inline;
+    text-decoration: none;
+}
+li{
+    list-style-type: none;
+}
+button{
+    background: var(--yellow_1022);
+    padding: 20px;
+    border: none;
+    color: var(--bg_1022);
+    font-size: var(--normalText_1022);
+    font-weight: var(--boldWeight);
+    border-radius: 999px;
+}
+#menu-toggle,label[for="menu-toggle"]{
+    display: none;
+}
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    img{
+        max-width: 210px;
+    }
+    ul{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        li{
+            margin:0 4px;
+            padding: 2px 4px;
+            &:hover{
+                border-radius: 999px;
+                background: var(--gray_1022);
+            }
+        }
+    }
 }

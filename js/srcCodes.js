@@ -286,7 +286,7 @@ const homework=[
     title:"復刻網頁",
     html:`
     <div id="sepTwentyforth">
-        <iframe src="./mimic.html"></iframe>
+        <iframe src="./mimic.html" style="min-width:800px"></iframe>
     </div>
     `
  }
