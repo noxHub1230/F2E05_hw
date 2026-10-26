@@ -305,6 +305,63 @@ header{
                 opacity: 0.85;
             }
         }
+        .dropdown-btn{
+            display: flex;
+            align-items: center;
+            width: 100%;
+            padding: 0 1.5em 0 0;
+            background: transparent;      /* 蓋掉全域 button 的黃色膠囊樣式 */
+            color: var(--text_1022);
+            font-family: inherit;
+            font-size: var(--smallText_1022);
+            font-weight: var(--normalWeight);
+            text-align: left;
+            border-radius: 0;
+            cursor: pointer;
+        }
+        .dropdown-current{
+            display: flex;
+            align-items: center;
+            gap: 0.5em;
+            white-space: nowrap;
+        }
+        .dropdown-list{
+            display: none;                /* 預設收起 */
+            position: absolute;
+            top: 100%;
+            left: -1px;
+            z-index: 20;
+            min-width: calc(100% + 2px);
+            margin: 4px 0 0;
+            padding: 4px 0;
+            background: var(--bg_1022);
+            border: 1px solid var(--line_1022);
+            border-radius: 4px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+        }
+        .dropdown.open .dropdown-list{
+            display: block;               /* 加上 .open 就展開 */
+        }
+        .dropdown.open{
+            border-color: var(--yellow_1022);
+        }
+        .dropdown.open .select-arrow{
+            transform: translateY(-50%) rotate(180deg);   /* 箭頭翻轉 */
+        }
+        .dropdown-item{
+            display: flex;
+            align-items: center;
+            gap: 0.5em;
+            padding: 0.6em 0.75em;
+            white-space: nowrap;
+            cursor: pointer;
+            &:hover{
+                background: var(--gray_1022);
+            }
+            &.selected{
+                color: var(--yellow_1022);
+            }
+        }
     }
 }
 .tab_active{

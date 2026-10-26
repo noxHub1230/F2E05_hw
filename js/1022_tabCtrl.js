@@ -4,13 +4,17 @@ const tabContent = document.querySelector(".tab-content");
 // 「航班」標籤的表單內容
 const flightForm = `
 <form class="flight-form">
-    <div class="form-input has-icon">
-        <i class="iconoir-data-transfer-both lead-icon"></i>
-        <select id="trip-type" aria-label="行程類型">
-            <option>來回</option>
-            <option>單程</option>
-        </select>
-        <i class="iconoir-nav-arrow-down select-arrow"></i>
+    <div class="form-input dropdown" id="trip-type">
+        <button type="button" class="dropdown-btn">
+            <span class="dropdown-current"><i class="iconoir-data-transfer-both"></i>來回</span>
+            <i class="iconoir-nav-arrow-down select-arrow"></i>
+        </button>
+        <ul class="dropdown-list">
+            <li class="dropdown-item selected" data-value="round"><i class="iconoir-data-transfer-both"></i>來回</li>
+            <li class="dropdown-item" data-value="oneway"><i class="iconoir-upload"></i>單程</li>
+            <li class="dropdown-item" data-value="multi"><i class="iconoir-ease-in-control-point"></i>不同點</li>
+        </ul>
+        <input type="hidden" name="trip-type" value="round">
     </div>
 
     <div class="form-group route-group">
@@ -106,4 +110,48 @@ tabContent.addEventListener("click", (event) => {
 // 暫時阻止表單送出後頁面重新整理
 tabContent.addEventListener("submit", (event) => {
     event.preventDefault();
+});
+
+// 下拉選單：開關與選取
+tabContent.addEventListener("click", (event) => {
+    const btn = event.target.closest(".dropdown-btn");
+    const item = event.target.closest(".dropdown-item");
+
+    // 點到按鈕：展開／收起
+    if (btn) {
+        btn.closest(".dropdown").classList.toggle("open");
+    }
+
+    // 點到選項：更新顯示內容、記錄值、收起
+    if (item) {
+        const dropdown = item.closest(".dropdown");
+
+        const oldSelected = dropdown.querySelector(".selected");
+        if (oldSelected) {
+            oldSelected.classList.remove("selected");
+        }
+        item.classList.add("selected");
+
+        dropdown.querySelector(".dropdown-current").innerHTML = item.innerHTML;  // 圖示 + 文字一起換
+        dropdown.querySelector("input[type='hidden']").value = item.dataset.value;
+        dropdown.classList.remove("open");
+    }
+});
+
+// 點選畫面其他地方：收起所有下拉選單
+document.addEventListener("click", (event) => {
+    if (!event.target.closest(".dropdown")) {
+        document.querySelectorAll(".dropdown.open").forEach((dropdown) => {
+            dropdown.classList.remove("open");
+        });
+    }
+});
+
+// 按 Esc 鍵收起
+document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+        document.querySelectorAll(".dropdown.open").forEach((dropdown) => {
+            dropdown.classList.remove("open");
+        });
+    }
 });
