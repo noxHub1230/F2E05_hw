@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-Hant">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,34 +8,52 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/iconoir-icons/iconoir@main/css/iconoir.css" />
 </head>
 <body>
-    <header>  
-    <a href="https://tigerhop.tigerairtw.com/" target="_blank">
-      <img class="nav-logo" src="https://www.datocms-assets.com/61479/1792148678-tigerhop-powered-by-dohop-v2.svg"/>  
-    </a>
-    <input id="menu-toggle" type="checkbox"/>
-    <label for="menu-toggle">≡</label>
-    <nav>
-      <ul>
-        <li>
-          <a href="#">選項1</a>
-        </li>
-        <li>
-          <a href="#">選項2</a>
-        </li>
-        <li>
-          <a href="#">選項3</a>
-        </li>
-      </ul>
-    </nav>
+    <header>
+      <a class="logo-link" href="https://tigerhop.tigerairtw.com/" target="_blank" rel="noopener">
+        <img class="nav-logo" alt="台灣虎航" src="https://www.datocms-assets.com/61479/1792148678-tigerhop-powered-by-dohop-v2.svg"/>
+      </a>
+      <input id="menu-toggle" type="checkbox"/>
+      <label for="menu-toggle" aria-label="開啟選單"><i class="iconoir-menu"></i></label>
+      <nav>
+        <ul>
+          <li><a href="#">準備出發</a></li>
+          <li><a href="#">歡迎登機</a></li>
+          <li><a href="#">虎迷優惠</a></li>
+          <li><a href="#">虎迷須知</a></li>
+        </ul>
+      </nav>
+      <div class="header-tools">
+        <a href="#"><i class="iconoir-search"></i><span>航班搜尋</span></a>
+        <a href="#"><i class="iconoir-user"></i><span>登入/註冊</span></a>
+        <a href="#"><i class="iconoir-language"></i><span>繁中</span></a>
+        <a href="#"><i class="iconoir-dollar-circle"></i><span>TWD</span></a>
+      </div>
     </header>
+
     <main>
-      <img src="#"/>
-      <h1>標題1</h1>
-      <h2>標題2</h2>
-      <h3>標題3</h3>
+      <img id="banner" alt="活動主視覺" src="https://strapi-assets.tigerairtw.com/HB_2880x600_GIF_171010cae3.gif"/>
+
+      <div class="search-area">
+        <div id="search-form">
+          <ul class="tab-items">
+          </ul>
+          <div class="tab-content">
+          </div>
+        </div>
+
+        <ul class="quick-links">
+          <li><a href="#"><span class="quick-icon"><i class="iconoir-clipboard-check"></i></span>管理訂單</a></li>
+          <li><a href="#"><span class="quick-icon"><i class="iconoir-airplane"></i></span>自助報到</a></li>
+          <li><a href="#"><span class="quick-icon"><i class="iconoir-calendar"></i></span>航班動態</a></li>
+          <li><a href="#"><span class="quick-icon"><i class="iconoir-shopping-bag"></i></span>免稅品購買</a></li>
+          <li><a href="#"><span class="quick-icon"><i class="iconoir-help-circle"></i></span>常見問題</a></li>
+        </ul>
+      </div>
     </main>
+
     <footer>
-      <h5>此為頁尾</h5>
+      <h5>© 台灣虎航 版型練習</h5>
     </footer>
+    <script src="./js/1022_tabCtrl.js"></script>
 </body>
 </html>
