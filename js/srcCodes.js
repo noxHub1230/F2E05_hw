@@ -286,7 +286,19 @@ const homework=[
     title:"復刻網頁",
     html:`
     <div id="sepTwentyforth">
-        <iframe src="./mimic.html" style="min-width:600px"></iframe>
+        <p style="color:black;text-align:center">~ 拖曳右下角可改變嵌入視窗尺寸 ~</p>
+        <iframe src="./mimic.html" 
+        style=" min-width:600px;    
+                display: inline-block;
+                resize: both;          
+                overflow: hidden;      
+                width: 600px;
+                height: 600px;
+                min-width: 200px;
+                min-height: 150px;
+                max-width: 100%; 
+                border:2px solid black;
+                border-radius:5px"></iframe>
     </div>
     `
  }
