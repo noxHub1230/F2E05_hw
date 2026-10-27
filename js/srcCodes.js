@@ -285,7 +285,7 @@ const homework=[
  {  date:"10月22日",
     title:"復刻網頁",
     html:`
-    <div id="sepTwentyforth">
+    <div id="octTwentytwo">
         <p style="color:black;text-align:center">~ 拖曳右下角可改變嵌入視窗尺寸 ~</p>
         <iframe src="./mimic.html" 
         style=" min-width:600px;    
