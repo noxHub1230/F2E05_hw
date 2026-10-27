@@ -247,7 +247,13 @@ header{
                 flex: 1;
                 min-width: 0;
                 border: none;
-                border-radius: 0;
+                border-radius: 4px;
+                &:nth-child(1){
+                    border-right:1px solid var(--line_1022);
+                }
+                &:nth-child(2){
+                    border-left: 1px solid var(--line_1022);
+                }
             }
             .form-input + .form-input{
                 border-left: 1px solid var(--line_1022);
@@ -430,6 +436,17 @@ footer{
     }
     #search-form .tab-content .route-group{
         flex-direction: column;
+        .form-input{
+            border-radius: 4px;
+            &:nth-child(1){
+                border-right:none ;
+                border-bottom:1px solid var(--line_1022);
+            }
+            &:nth-child(2){
+                border-left:none ;
+                border-top: 1px solid var(--line_1022);
+            }
+        }
     }
     #search-form .tab-content .route-group .form-input + .form-input{
         border-left: none;
