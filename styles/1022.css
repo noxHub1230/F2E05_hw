@@ -423,8 +423,8 @@ footer{
     }
 }
 
-/* ===== 平板／小筆電（1100px 以下）：表單改為垂直堆疊 ===== */
-@media (max-width: 1100px){
+/* ===== 平板／小筆電（850px 以下）：表單改為垂直堆疊 ===== */
+@media (max-width: 850px){
     #search-form .tab-content .flight-form{
         grid-template-columns: minmax(0,1fr);
     }
